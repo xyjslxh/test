@@ -28,6 +28,7 @@ public class CreateThreadDemo {
 		thread1.start();
 		// 3.实现callable接口
 		ExecutorService service = Executors.newSingleThreadExecutor();
+		@SuppressWarnings({ "unchecked", "rawtypes" })
 		Future<String> future = service.submit(new Callable() {
 			@Override
 			public String call() throws Exception {
